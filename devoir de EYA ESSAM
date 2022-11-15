@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main()
+{
+                   //EXERCICE 1:
+    //1. le processus de pid 1 est le processus init
+//*2 le processus sera toujours les processus en cours d'execusion 
+    //3. il ya pas le programme
+    //4. il ya pas le programme
+		    //EXERCICE 2:
+//Ecrire un programme qui calcul le factorielle d'un nombre entrer
+    int i, fact = 1;
+    write(STDOUT_FILENO, "Ecrire un nombre: ", 19);
+    int tampon[100];
+    int nb = read(STDIN_FILENO, tampon, 100);
+    int c = atoi(tampon);
+
+    if (c==0){
+        write(STDOUT_FILENO, "factorielle est ", 17);
+        write(STDOUT_FILENO, "1", 1);
+    }
+    if (c<0){
+        write(STDOUT_FILENO, "valeur entree incorrect ", 23);
+    }
+    else{
+        for(i=1; i<c+1;i++){
+            fact = fact*i;
+        }
+        write(STDOUT_FILENO, "factorielle est ", 17);
+        printf("%d",fact);
+        write(STDOUT_FILENO, fact, 2);
+    }
+}
+
+		//EXERCICE 3:
+//il y a pas de consigne
