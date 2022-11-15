@@ -1,0 +1,43 @@
+Exercice 1 :
+    1- Le processus dont le PID est un est le processus Init qui est le premier processus lancé sous LINUX
+    2- Le programme qui est le temps à attendre est le suivant :
+
+
+#include <sys/file.h>
+#include <sys/wait.h>
+int main()
+{
+    int ressource;
+    ressource=1;
+    system("stop");
+    while(ressource==1){
+        wait(NULL);
+    }
+    return 0;
+}
+
+
+Remarque : Lorsque l’on utilise ps aux sans exécuter le code, l’on se rend compte que le processus de PID 1 est le processus sb init bash (init) mais après exécution le processus de PID 1 n’est plus init bash mais sb. 
+    3- Pas de programme 
+    4- Pas de programme
+
+Exercice 2 :
+#include <stdlib.h>
+#include <sys/file.h>
+#include <sys/wait.h>
+int main()
+{
+    int i,factorielle;
+    write(STDOUT_FILENO,"Entrer une chaine de caractere ayant la meme taille que le nombre dont vous voulez le factorielle:",100);
+    char tampon[150];
+    int n = read(STDIN_FILENO, tampon, 150);
+    for(i=1;i<n+1;i++){
+        factorielle=factorielle*i;
+    }
+    write(STDOUT_FILENO, "La factorielle est",25);
+    printf("%d",factorielle);
+    return 0;
+}
+
+Exercice 3 : 
+Pas de consigne 
