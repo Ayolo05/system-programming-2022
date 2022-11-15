@@ -1,0 +1,53 @@
+//*#include <stdio.h>
+//*#include <stdlib.h>
+//*#include <sys/types.h>
+//*#include <unistd.h>
+
+//*int main()
+//*{
+                   //EXERCICE 1:
+    //1.init
+//*2 le processus sera toujours les processus en cours d'execusion 
+#include <sys/file.h>
+#include <sys/wait.h>
+int main()
+{
+    system("stop");
+    int val
+    val=2;
+    while(val==2){
+        wait(NULL);
+    }
+    return 0;
+}
+    //3. vous avez oblier le dit programme
+    //4. vous avez oublier le dit programme
+    
+    
+    
+		    //EXERCICE 2:
+//Ecrire un programme qui calcul le factorielle d'un nombre entrer
+    int i, fact = 1;
+    write(STDOUT_FILENO, "Ecrire un nombre: ", 19);
+    int tampon[100];
+    int nb = read(STDIN_FILENO, tampon, 100);
+    int c = atoi(tampon);
+
+    if (c==0){
+        write(STDOUT_FILENO, "factorielle est ", 17);
+        write(STDOUT_FILENO, "1", 1);
+    }
+    if (c<0){
+        write(STDOUT_FILENO, "valeur entree incorrect ", 23);
+    }
+    else{
+        for(i=1; i<c+1;i++){
+            fact = fact*i;
+        }
+        write(STDOUT_FILENO, "factorielle est ", 17);
+        read("%d",fact);
+        write(STDOUT_FILENO, fact, 2);
+    }
+}
+
+		
