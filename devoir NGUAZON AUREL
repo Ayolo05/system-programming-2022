@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main()
+{
+/*                          Exercice 1
+
+    Question 1: Quel est le processus de pid 1
+        C'est le processus init
+
+    Question 2: Ecrire un programme qui ne se termine pas
+
+        int a=0;
+        while(a==o){
+            printf("Bonjour");
+        }
+    Question 3: Je constate que le programme ne s'exécute pas
+
+*/
+/*                         Exercice 2
+
+    Creer un nouveau projet permettant de prendre un nombre en paramètre et d'afficher la factorielle de ce nombre
+*/
+
+    int i;
+    int fact = 1;
+    write(STDOUT_FILENO, "Ecrire un nombre" , 19);
+    int nbre[100];
+    int n = read(STDIN_FILENO, nbre, 100);
+    int a= atoi(nbre);
+
+    if (a==0){
+       write(STDOUT_FILENO, "La factorielle est", 23);
+        write(STDOUT_FILENO, "1", 2);
+    }
+    else{
+        for(i=1; 1<a+1 ; i++){
+            fact = fact*i;
+        }
+
+        write(STDOUT_FILENO, "La factorielle est", 20);
+        printf("%d",fact);
+
+    }
+}
