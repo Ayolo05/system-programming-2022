@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<unistd.h>
+//exercice1
+/1. 1-	Le processus dont le PID est un est le processus Init
+2. ecrivons le programme*/
+int main(){
+int i=0;
+pid_t p=fork();
+  if (p==0){
+    while(i==0){
+        printf("informatique")
+  }
+  }
+  wait (NULL)
+
+
+
+//exercice 2:calculons le factoriel d'un nombre
+int main(){
+
+   int i,F
+    write (STDOUT_FILENO"entrer un nombre positif",15);
+   char tanpom[100]
+   int n=read (STDIN_FILENO,tanpom,100);
+   n=atoi (tanpom);
+
+   int facto (int nombre){
+    int Fact=1;
+    for (i=1;i<nombre;i++{
+         Fact=nombre*facto(nombre-i);
+   }
+    return Fact;
+}
+if (n==0){
+    F=0;
+}
+else{
+    F=facto(n);
+}
+
+printf("le factoriel de %d est:%d",n,F);
+
+}
